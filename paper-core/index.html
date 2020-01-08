@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>文件纸</title>
+</head>
+<body>
+  <div class="page-endpic anim">
+    <div class="page-endpic-paper">
+      <div class="page-endpic-paper-line l1"></div>
+      <div class="page-endpic-paper-line l2"></div>
+      <div class="page-endpic-paper-line l3"></div>
+      <div class="page-endpic-paper-line l4"></div>
+      <div class="page-endpic-paper-line l5"></div>
+      <span class="page-endpic-angle"></span>
+      <span class="page-endpic-angle-shadow"></span>
+      <span class="page-endpic-icon-shadow"></span>
+    </div>
+  </div>
+</body>
+<style>
+body {
+  background: #F2F2F2;
+}
+.page-endpic {
+  width: 106px;
+  height: 128px;
+  margin: 200px auto;
+}
+.page-endpic-paper:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 14px solid #f1f1f1;
+  border-bottom: 14px solid #f7f7f7;
+  border-left: 14px solid #f7f7f7;
+  border-right: 14px solid #f1f1f1;
+  border-top-color: rgba(242, 242, 242, 1);
+  border-right-color: rgba(242, 242, 242, 1);
+  border-bottom-left-radius: 3px;
+}
+.page-endpic-paper {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ebebeb 0%, #d9d9d9 100%);
+  position: relative;
+  border-radius: 5px;
+  animation: a-e-paper 0.3s cubic-bezier(0.42, 1.14, 1, 1) both;
+}
+@keyframes a-e-paper {
+  0% {
+    opacity: 0;
+    transform: translate(0, 90px) scale(0.3, 0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(0, -10px) scale(1.1, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(0, 5px) scale(0.95, 1.05);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(0, -4px) scale(1.02, 0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1, 1);
+  }
+  
+}
+
+.page-endpic-paper-line {
+  position: absolute;
+  left: 28px;
+  top: 36px;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+}
+.l1 {
+  animation: a-c-quote-1-line 0.2s 0.2s linear both;
+}
+@keyframes a-c-quote-1-line {
+  0% {
+    opacity: 0;
+    transform: translate(0, 1px) scale(0.9, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, -1px) scale(1.1, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0px) scale(1, 1);
+  }
+}
+.l2 {
+  top: 48px;
+  animation: a-c-quote-1-line 0.2s 0.3s linear both;
+}
+.l3 {
+  top: 60px;
+  animation: a-c-quote-1-line 0.2s 0.4s linear both;
+}
+.l4 {
+  top: 72px;
+  animation: a-c-quote-1-line 0.2s 0.5s linear both;
+}
+.l5 {
+  top: 84px;
+  width: 34px;
+  animation: a-c-quote-1-line 0.2s 0.6s linear both;
+}
+.page-endpic-angle-shadow {
+  position: absolute;
+  right: 0;
+  top: 28px;
+  width: 0;
+  height: 0;
+  border-top: 12.5px solid #d8d8d8;
+  border-right: 12.5px solid #d8d8d8;
+  border-left: 12.5px solid transparent;
+  border-bottom: 12.5px solid transparent;
+
+}
+</style>
+</html>
